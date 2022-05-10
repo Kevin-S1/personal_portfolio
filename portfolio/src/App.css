@@ -1,5 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&family=Signika:wght@300;400;500;600&display=swap');
+
 .App {
   display: flex;
   flex-direction: row;
   text-align: center;
+}
+
+.parallax-page{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 10vw;
+  background-color: #367678;
+}
+
+.parallax-sticky{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: 2rem;
+}
+
+.parallax-sticky-icon{
+  color: white;
+  width: 2rem;
+  transform: scale(1.5);
+}
+
+.parallax-page__centered{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #364078;
+}
+
+.box{
+
+}
+
+.header{
+  color: white;
+  font-family: 'Signika', sans-serif;
+}
+
+.header__s{
+  font-size: 1.2rem;
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.header__m{
+  font-size: 1.5rem;
+}
+
+.header__l{
+  font-size: 3rem;
+}
+
+.header__xl{
+  font-size: 4rem;
+  margin: 0;
+}
+
+.header__name{
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.text{
+  color: white;
+  font-family: 'Signika', sans-serif;
+  width: 40rem;
+  text-align: left;
+  margin-top: 0;
+}
+
+.column-container{
+  display: flex;
+
+}
+
+.column{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 40rem;
+  width: 20rem;
+  border: 2px solid white;
+  margin-right: 2rem;
+}
+
+.column-item{
+  width: 18rem;
+  height: 5rem;
+  background-color: #58c5c994;
+  border-radius: 0.2rem;
+}
+
+.image__kevin{
+  margin-left: 2rem;
+  width: 15rem;
+  border-radius: 50%;
+  border: 5px solid #3f4c91;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+@media screen and (min-width: 1100px) {
+  .parallax-page__centered{
+    flex-direction: row;
+  }
+
+  .header__xl{
+    font-size: 5rem;
+  }
 }
