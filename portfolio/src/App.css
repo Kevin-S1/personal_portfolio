@@ -1,9 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&family=Signika:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500&family=Signika:wght@300;400;500;600&display=swap');
 
 .App {
   display: flex;
   flex-direction: row;
   text-align: center;
+}
+
+.arrow{
+  position: absolute;
+  left: 5vw;
+  top: 8vh;
+  transform: rotate(190deg);
 }
 
 .parallax-page{
@@ -21,12 +28,17 @@
   justify-content: flex-start;
   align-items: flex-start;
   margin-left: 2rem;
+  display: none;
 }
 
-.parallax-sticky-icon{
+.icon{
   color: white;
-  width: 2rem;
+  margin: 0 0.5rem 0 0.5rem;
   transform: scale(1.5);
+}
+
+.icon:hover{
+  transform: scale(1.7);
 }
 
 .parallax-sticky-nav{
@@ -96,21 +108,21 @@
 }
 
 .header__s{
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-align: left;
   margin-bottom: 0;
 }
 
 .header__m{
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .header__l{
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .header__xl{
-  font-size: 4rem;
+  font-size: 3rem;
   margin: 0;
 }
 
@@ -118,6 +130,27 @@
   font-family: 'Rajdhani', sans-serif;
   font-size: 2rem;
   margin-bottom: 1rem;
+}
+
+.header__light{
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.header__landing-page{
+  width: 15rem;
+  position: absolute;
+  left: 15vw;
+  top: 5vh;
+  font-weight: 700;
+}
+
+.header__left{
+  text-align: left;
+  text-decoration: underline;
+  font-style: italic;
 }
 
 .subheader{
@@ -137,10 +170,18 @@
   padding-top: 1rem;
 }
 
+.nav-item{
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: left;
+  text-decoration: none;
+}
+
 .text{
   color: white;
   font-family: 'Signika', sans-serif;
-  width: 40rem;
+  width: 80vw;
   text-align: left;
   margin-top: 0;
 }
@@ -148,43 +189,6 @@
 .text__project{
   width: 10rem;
   text-align:left;
-}
-
-.column-container{
-  display: flex;
-
-}
-
-.column{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 40rem;
-  width: 20rem;
-  border: 4px double white;
-  margin-right: 2rem;
-}
-
-.column__sub{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 15rem;
-  width: 18rem;
-  margin: 0;
-  border: none;
-}
-
-.column-item{
-  display: flex;
-  justify-content: center;
-  align-items: center;  
-  width: 18rem;
-  height: 3rem;
-  background-color: #58c5c994;
-  border-radius: 0.2rem;
-  margin-bottom: 1rem;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
 .image__kevin{
@@ -204,15 +208,52 @@
   
 }
 
-
-
-
 @media screen and (min-width: 1100px) {
   .parallax-page__centered{
     flex-direction: row;
   }
 
+  .parallax-sticky{
+    display: inline-flex;
+  }
+
+  .header__s{
+    font-size: 1.2rem;
+    margin-bottom: 0;
+  }
+  
+  .header__m{
+    font-size: 1.5rem;
+  }
+  
+  .header__l{
+    font-size: 3rem;
+  }
+
+  .header__name{
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .subheader{
+    color: rgb(22, 42, 33);
+    font-size: 1rem;
+  }
+
   .header__xl{
     font-size: 5rem;
+  }
+
+  .text{
+    color: white;
+    font-family: 'Signika', sans-serif;
+    width: 40rem;
+    text-align: left;
+    margin-top: 0;
+  }
+  .text__project{
+    width: 10rem;
+    text-align:left;
   }
 }
