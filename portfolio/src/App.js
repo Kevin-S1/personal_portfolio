@@ -1,24 +1,47 @@
 import './App.css';
 import {Parallax, ParallaxLayer } from '@react-spring/parallax';
-import NavBar from './Components/NavBar/NavBar';
-import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
+import { useEffect, useRef } from 'react';
+import { AiFillGithub, AiFillLinkedin, AiFillMail } from 'react-icons/ai'
+import {FaArrowAltCircleRight} from 'react-icons/fa'
 
 function App() {
+
+  const parallaxRef = useRef()
+
+  const onScroll = () =>
+    console.log(parallaxRef.current.current / parallaxRef.current.space)
+
+  useEffect(() => {
+    if (!parallaxRef.current || !parallaxRef.current.container) return
+    parallaxRef.current.container.onscroll = onScroll
+  })
+
   return (
     <div className="App">
       
-      <Parallax pages={3}>
+      <Parallax pages={3} ref={parallaxRef}>
+
+        <ParallaxLayer offset={0} speed={0} style={{ backgroundColor: '#364078' }} />
+        <ParallaxLayer offset={1} speed={0} style={{ backgroundColor: '#367678' }} />
+        <ParallaxLayer offset={2} speed={0} style={{ backgroundColor: '#783636' }} />
+
         <ParallaxLayer className='parallax-sticky' sticky={{start: 0, end: 3}}>
           <h4 className='header header__name'>Kevin Sips</h4>
           <div className='parallax-sticky-icons'>
-            <AiFillGithub className='parallax-sticky-icon' />
-            <AiFillLinkedin className='parallax-sticky-icon' />
-
+            <a href='https://github.com/Kevin-S1'><AiFillGithub className='parallax-sticky-icon' /></a>
+            <a href='https://www.linkedin.com/in/kevinsips/'><AiFillLinkedin className='parallax-sticky-icon' /></a>
+            <a href='mailto:kevin.sips@appliedtechnology.se'><AiFillMail className='parallax-sticky-icon' /></a>
           </div>
-          
+          <div className='parallax-sticky-nav'>
+            <button className='nav-item' onClick={() => parallaxRef.current.scrollTo(0)}><FaArrowAltCircleRight className='nav-icon'/>Home</button>
+            <button className='nav-item' onClick={() => parallaxRef.current.scrollTo(1)}><FaArrowAltCircleRight className='nav-icon'/>Skills</button>
+            <button className='nav-item' onClick={() => parallaxRef.current.scrollTo(2)}><FaArrowAltCircleRight className='nav-icon'/>Projects</button>
+          </div>
         </ParallaxLayer>
 
-        <ParallaxLayer 
+        <ParallaxLayer
+          offset={0}
+          speed={2}
           className='parallax-page__centered'>
           <div className='box box__name'>
             <h1 className='header header__xl'>Hi, I'm Kevin.</h1>
@@ -30,7 +53,12 @@ function App() {
           
         </ParallaxLayer>
 
-        <ParallaxLayer className='parallax-page' offset={1}>
+        
+
+        <ParallaxLayer 
+          offset={1}
+          speed={0.5}
+          className='parallax-page'>
           <div className='box'>
             <h2 className='header header__l'>Skills</h2>
           </div>

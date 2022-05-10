@@ -29,6 +29,25 @@
   transform: scale(1.5);
 }
 
+.parallax-sticky-nav{
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.nav-item{
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 1.25rem;
+  text-align: left;
+  margin-bottom: 1rem;
+  text-decoration: underline;
+}
+
 .parallax-page__centered{
   display: flex;
   flex-direction: column;
@@ -111,6 +130,11 @@
   color: goldenrod;
   margin: 0;
   padding: 0;
+}
+
+.nav-icon{
+  width: 1rem;
+  padding-top: 1rem;
 }
 
 .text{
