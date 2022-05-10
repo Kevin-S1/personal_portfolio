@@ -7,8 +7,8 @@ function App() {
   return (
     <div className="App">
       
-      <Parallax pages={4}>
-        <ParallaxLayer className='parallax-sticky' sticky={{start: 0, end: 4}}>
+      <Parallax pages={3}>
+        <ParallaxLayer className='parallax-sticky' sticky={{start: 0, end: 3}}>
           <h4 className='header header__name'>Kevin Sips</h4>
           <div className='parallax-sticky-icons'>
             <AiFillGithub className='parallax-sticky-icon' />
@@ -129,12 +129,60 @@ function App() {
           
         </ParallaxLayer>
 
-        <ParallaxLayer>
-          
-        </ParallaxLayer>
+        <ParallaxLayer offset={2} className='parallax-page page-3'>
+          <div className='box'>
+            <h2 className='header header__l'>Projects</h2>
+          </div>
 
-        <ParallaxLayer>
-          
+          <section className='project-container'>
+            <article className='project'>
+              <article className='project-image'>
+                <img className='project-image__mobile' src={require('./placeholder.png')}/>
+              </article>
+              <article className='project-description'>
+                <h4 className='header header__s'>CryptoSimulator</h4>
+                <h6 className='link-label'> <a href='https://github.com/Kevin-S1/cryptosimulator'>Github</a></h6>
+                <p className='text text__project'>A platform which simulates buying and selling bitcoin. Built during a 24 hour hackathon at &lt;/salt&gt;.</p>
+              </article>
+
+            </article>
+            <article className='project'>
+              <article className='project-image'>
+                <img className='project-image__mobile' src={require('./byarnold.gif')}/>
+              </article>
+              <article className='project-description'>
+                <h4 className='header header__s'>byarnold.com</h4>
+                <h6 className='link-label'> <a href='https://github.com/Kevin-S1/byarnold_react'>Github</a> </h6>
+                <h6 className='link-label'> <a href='https://www.byarnold.com'>Live version</a> </h6>
+                <p className='text text__project'>A website built for a small business owner. Includes an admin page. Built with React, Javascript & Firebase.</p>
+              </article>
+
+            </article>
+
+            <article className='project'>
+              <article className='project-image'>
+                <img className='project-image__mobile' src={require('./borrowmy.gif')}/>
+              </article>
+              <article className='project-description'>
+                <h4 className='header header__s'>BorrowMy</h4>
+                <h6 className='link-label'><a href='https://github.com/Kevin-S1/salt_final_project'>Github</a> </h6>
+                <p className='text text__project'>A borrowing platform where parents can lend out their children's toys and borrow toys from other parents. Built with .NET WebAPI, React, Typescript and Azure DB.</p>
+              </article>
+
+            </article>
+
+            <article className='project'>
+              <article className='project-image'>
+                <img className='project-image__mobile' src={require('./placeholder.png')}/>
+              </article>
+              <article className='project-description'>
+                <h4 className='header header__s'>kevinsips.dev</h4>
+                <h6 className='link-label'><a href='https://github.com/Kevin-S1/personal_portfolio'>Github</a> </h6>
+                <p className='text text__project'>The site that you're on now! Built with React.</p>
+              </article>
+
+            </article>
+          </section>
         </ParallaxLayer>
       </Parallax>
     </div>
