@@ -11,7 +11,7 @@ function Skills() {
             <div className='column'>
               <h3 className='header header__m'>Languages</h3>
               <div className='column column__sub'>
-                <h4 className='header'>Programming languages</h4>
+                <h4 className='header header__s'>Programming languages</h4>
                 <article className='column-item'>
                   <h5 className='subheader'>C#</h5>
                 </article>
@@ -23,7 +23,7 @@ function Skills() {
                 </article>
               </div>
               <div className='column column__sub'>
-                <h4 className='header'>Natural languages</h4>
+                <h4 className='header header__s'>Natural languages</h4>
                 <article className='column-item'>
                   <h5 className='subheader'>Dutch - Native</h5>
                 </article>

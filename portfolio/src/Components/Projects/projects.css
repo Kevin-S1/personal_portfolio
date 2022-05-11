@@ -1,0 +1,10 @@
+.project-image{
+    display: none;
+}
+
+
+@media screen and (min-width:1100px) {
+    .project-image{
+        display: inline;
+    }
+}

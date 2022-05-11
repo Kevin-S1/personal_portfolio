@@ -1,23 +1,27 @@
 .column-container{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .column{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 30rem;
-    width: 20rem;
-    border: 4px double white;
-    margin-right: 2rem;
+    justify-content: flex-start;
+    height: 40vh;
+    width: 40vw;
+    box-shadow: 1px solid white;
+    margin: 0 0.5rem 0.5rem 0;
+
 }
   
 .column__sub{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-    height: 10rem;
+    height: auto;
     width: 18rem;
     margin: 0;
     border: none;
@@ -27,11 +31,11 @@
     display: flex;
     justify-content: center;
     align-items: center;  
-    width: 18rem;
-    height: 3rem;
+    width: 36vw;
+    height: 1rem;
     background-color: #58c5c994;
     border-radius: 0.2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.25rem;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
@@ -43,5 +47,26 @@
     .column{
         height: 40rem;
         width: 20rem;
+        border: 4px double white;
+        margin-right: 2rem;
     }
+    .column-item{
+        display: flex;
+        justify-content: center;
+        align-items: center;  
+        width: 18rem;
+        height: 3rem;
+        background-color: #58c5c994;
+        border-radius: 0.2rem;
+        margin-bottom: 1rem;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    }
+
+    .column__sub{
+        height: 15rem;
+        width: 18rem;
+        margin: 0;
+        border: none;
+    }
+    
 }
