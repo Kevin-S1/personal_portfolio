@@ -2,7 +2,8 @@ import './App.css';
 import {Parallax, ParallaxLayer } from '@react-spring/parallax';
 import { useEffect, useRef } from 'react';
 import { AiFillGithub, AiFillLinkedin, AiFillMail, AiFillCheckCircle } from 'react-icons/ai'
-import {FaArrowAltCircleRight} from 'react-icons/fa'
+import { FaArrowAltCircleRight } from 'react-icons/fa'
+import { MdNavigateNext } from 'react-icons/md'
 import Skills from './Components/Skills/Skills';
 import Projects from './Components/Projects/Projects';
 
@@ -19,8 +20,6 @@ function App() {
   })
 
   return (
-    <div className="App">
-      
       <Parallax pages={3} ref={parallaxRef} className="parallax">
 
         <ParallaxLayer offset={0} speed={0} style={{ backgroundColor: '#364078' }} />
@@ -43,31 +42,25 @@ function App() {
               <img className='image__kevin' src={require('./media/IMG-0127.JPG')} />
             </section>
           </div>
-                  
         </ParallaxLayer>
 
         <ParallaxLayer offset={0} speed={5} className="landing-page--overlay">
           <h4 className='header header__light header__landing-page'>Take a look at my profiles or get in touch!</h4>
           <img className='arrow' src={require('./media/arrow1.png')}/>
         </ParallaxLayer>
-        
-
+      
         <ParallaxLayer 
           offset={1}
           speed={1}
-          className='parallax-page'>
-            
+          className='parallax-page parallax-page__skills'>
           <Skills/>
-          
         </ParallaxLayer>
 
         <ParallaxLayer 
           offset={2} 
           speed={1}
           className='parallax-page parallax-page__projects'>
-          
           <Projects />
-
         </ParallaxLayer>
 
         <ParallaxLayer className='parallax-sticky' sticky={{start: 0, end: 3}} >
@@ -78,13 +71,12 @@ function App() {
             <a href='mailto:kevin.sips@appliedtechnology.se'><AiFillMail className='icon' /></a>
           </section>
           <section className='parallax-sticky-nav'>
-            <button className='nav-item' onClick={() => parallaxRef.current.scrollTo(0)}><FaArrowAltCircleRight className='nav-icon'/>Home</button>
-            <button className='nav-item' onClick={() => parallaxRef.current.scrollTo(1)}><FaArrowAltCircleRight className='nav-icon'/>Skills</button>
-            <button className='nav-item' onClick={() => parallaxRef.current.scrollTo(2)}><FaArrowAltCircleRight className='nav-icon'/>Projects</button>
+            <button className='nav-item' onClick={() => parallaxRef.current.scrollTo(0)}><MdNavigateNext className='nav-icon'/>Home</button>
+            <button className='nav-item' onClick={() => parallaxRef.current.scrollTo(1)}><MdNavigateNext className='nav-icon'/>Skills</button>
+            <button className='nav-item' onClick={() => parallaxRef.current.scrollTo(2)}><MdNavigateNext className='nav-icon'/>Projects</button>
           </section>
         </ParallaxLayer>
       </Parallax>
-    </div>
   );
 }
 

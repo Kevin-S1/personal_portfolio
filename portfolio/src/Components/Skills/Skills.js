@@ -9,9 +9,11 @@ function Skills() {
 
           <section className='column-container'>
             <div className='column'>
-              <h3 className='header header__m'>Languages</h3>
+              <section className='column-title'>
+                <h3 className='header header__m'>Languages</h3>
+              </section>
               <div className='column column__sub'>
-                <h4 className='header header__s'>Programming languages</h4>
+                <h4 className='header header__s'>Programming</h4>
                 <article className='column-item'>
                   <h5 className='subheader'>C#</h5>
                 </article>
@@ -23,7 +25,7 @@ function Skills() {
                 </article>
               </div>
               <div className='column column__sub'>
-                <h4 className='header header__s'>Natural languages</h4>
+                <h4 className='header header__s'>Natural</h4>
                 <article className='column-item'>
                   <h5 className='subheader'>Dutch - Native</h5>
                 </article>
@@ -36,7 +38,9 @@ function Skills() {
               </div>
             </div>
             <div className='column'>
-              <h3 className='header header__m'>Backend</h3>
+              <section className='column-title'>
+                <h3 className='header header__m'>Backend</h3>
+              </section>
               <article className='column-item'>
                 <h5 className='subheader'>.NET</h5>
               </article>
@@ -51,7 +55,9 @@ function Skills() {
               </article>
             </div>
             <div className='column'>
-              <h3 className='header header__m'>Frontend</h3>
+              <section className='column-title'>
+                <h3 className='header header__m'>Frontend</h3>
+              </section>
               <article className='column-item'>
                 <h5 className='subheader'>HTML</h5>
               </article>
@@ -72,7 +78,9 @@ function Skills() {
               </article>
             </div>
             <div className='column'>
-              <h3 className='header header__m'>Tools & Technologies</h3>
+              <section className='column-title'>
+                <h3 className='header header__m'>Tools & Technologies</h3>
+              </section>
               <article className='column-item'>
                 <h5 className='subheader'>VS Code</h5>
               </article>

@@ -1,3 +1,7 @@
+.parallax-page__skills{
+    background-color: #367678;
+}
+
 .column-container{
     display: flex;
     flex-direction: row;
@@ -11,20 +15,38 @@
     justify-content: flex-start;
     height: 40vh;
     width: 40vw;
-    box-shadow: 1px solid white;
     margin: 0 0.5rem 0.5rem 0;
+    background-color: #459496e9;
 
+}
+
+.column-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(234, 234, 112);
+    margin-bottom: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.column-title .header{
+    color: #063e40;
 }
   
 .column__sub{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     height: auto;
     width: 18rem;
-    margin: 0;
-    border: none;
+    box-shadow: none !important;
+}
+
+.column__sub .header{
+    color: #063e40;
+    margin-bottom: 0.5rem;
 }
   
 .column-item{
@@ -47,8 +69,8 @@
     .column{
         height: 40rem;
         width: 20rem;
-        border: 4px double white;
         margin-right: 2rem;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     }
     .column-item{
         display: flex;
@@ -65,8 +87,7 @@
     .column__sub{
         height: 15rem;
         width: 18rem;
-        margin: 0;
-        border: none;
+        margin: 0 0 2rem 0;
     }
     
 }
