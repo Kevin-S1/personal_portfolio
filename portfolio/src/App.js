@@ -21,17 +21,16 @@ function App() {
   return (
     <div className="App">
       
-      <Parallax pages={3} ref={parallaxRef}>
+      <Parallax pages={3} ref={parallaxRef} className="parallax">
 
         <ParallaxLayer offset={0} speed={0} style={{ backgroundColor: '#364078' }} />
         <ParallaxLayer offset={1} speed={0} style={{ backgroundColor: '#367678' }} />
         <ParallaxLayer offset={2} speed={0} style={{ backgroundColor: '#783636' }} />
         
-
         <ParallaxLayer
           offset={0}
           speed={1}
-          className='parallax-page__centered'>
+          className='parallax-page parallax-page__landing'>
           <div className='box box__name'>
             <section className='box box__left'>
               <h1 className='header header__xl'>Hi, I'm Kevin.</h1>
@@ -44,8 +43,7 @@ function App() {
               <img className='image__kevin' src={require('./media/IMG-0127.JPG')} />
             </section>
           </div>
-          
-          
+                  
         </ParallaxLayer>
 
         <ParallaxLayer offset={0} speed={5} className="landing-page--overlay">
@@ -66,14 +64,13 @@ function App() {
         <ParallaxLayer 
           offset={2} 
           speed={1}
-          factor={1}
-          className='parallax-page page-3'>
+          className='parallax-page parallax-page__projects'>
           
           <Projects />
 
         </ParallaxLayer>
 
-        <ParallaxLayer className='parallax-sticky' sticky={{start: 0, end: 3}}>
+        <ParallaxLayer className='parallax-sticky' sticky={{start: 0, end: 3}} >
           <h4 className='header header__name'>Kevin Sips</h4>
           <section className='icons'>
             <a href='https://github.com/Kevin-S1'><AiFillGithub className='icon' /></a>
@@ -86,8 +83,6 @@ function App() {
             <button className='nav-item' onClick={() => parallaxRef.current.scrollTo(2)}><FaArrowAltCircleRight className='nav-icon'/>Projects</button>
           </section>
         </ParallaxLayer>
-
-        
       </Parallax>
     </div>
   );

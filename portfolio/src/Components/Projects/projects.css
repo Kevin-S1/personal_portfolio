@@ -1,6 +1,49 @@
-.project-image{
+.parallax-page__projects{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #783636;
+    z-index: 999 !important;
+  }
+  
+  .project-container{
+    margin-left: 10rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .project{
+    display: flex;
+    width: 25rem;
+    height: 22rem;
+    border: 4px double white;
+    margin: 1rem;
+  }
+  
+  .project-image{
+    height: 15rem;
+    margin: 0.5rem 1rem 0 0.5rem;
     display: none;
-}
+  }
+  
+  .project-description{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .link-label{
+    margin: 0.25rem;
+    margin: 0.25rem;
+    padding: 0;
+  }
+
+  .link-label a{
+      color: goldenrod;
+      z-index: 999;
+  }
 
 
 @media screen and (min-width:1100px) {
