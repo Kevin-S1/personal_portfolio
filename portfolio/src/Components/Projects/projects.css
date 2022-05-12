@@ -8,17 +8,20 @@
   }
   
   .project-container{
-    margin-left: 10rem;
+    margin-left: 3rem;
     display: flex;
     flex-wrap: wrap;
+    width: 80vw;
   }
   
   .project{
     display: flex;
-    width: 25rem;
+    width: 23rem;
     height: 22rem;
-    border: 4px double white;
+    background-color: #ab4c4c6e;
     margin: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: 3px double #783636;
   }
   
   .project-image{

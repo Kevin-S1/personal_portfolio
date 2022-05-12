@@ -6,6 +6,7 @@ import { FaArrowAltCircleRight } from 'react-icons/fa'
 import { MdNavigateNext } from 'react-icons/md'
 import Skills from './Components/Skills/Skills';
 import Projects from './Components/Projects/Projects';
+import ScrollDown from './Components/ScrollDown/ScrollDown';
 
 function App() {
 
@@ -42,6 +43,7 @@ function App() {
               <img className='image__kevin' src={require('./media/IMG-0127.JPG')} />
             </section>
           </div>
+          <button style={{border:"none", backgroundColor:"transparent"}} onClick={() => parallaxRef.current.scrollTo(1)}><ScrollDown nextPage='skills'/></button>
         </ParallaxLayer>
 
         <ParallaxLayer offset={0} speed={5} className="landing-page--overlay">
@@ -53,13 +55,16 @@ function App() {
           offset={1}
           speed={1}
           className='parallax-page parallax-page__skills'>
+          <button style={{border:"none", backgroundColor:"transparent"}} onClick={() => parallaxRef.current.scrollTo(0)}><ScrollDown direction ='up' nextPage='home'/></button>
           <Skills/>
+          <button style={{border:"none", backgroundColor:"transparent"}} onClick={() => parallaxRef.current.scrollTo(2)}><ScrollDown nextPage='projects'/></button>
         </ParallaxLayer>
 
         <ParallaxLayer 
           offset={2} 
           speed={1}
           className='parallax-page parallax-page__projects'>
+          <button style={{border:"none", backgroundColor:"transparent"}} onClick={() => parallaxRef.current.scrollTo(1)}><ScrollDown direction ='up' nextPage='skills'/></button>
           <Projects />
         </ParallaxLayer>
 

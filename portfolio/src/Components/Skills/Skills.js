@@ -1,6 +1,7 @@
 import './skills.css';
 
 function Skills() {
+
   return (
         <>
           <div className='box'>
@@ -52,6 +53,9 @@ function Skills() {
               </article>
               <article className='column-item'>
                 <h5 className='subheader'>MongoDB</h5>
+              </article>
+              <article className='column-item'>
+                <h5 className='subheader'>SQL</h5>
               </article>
             </div>
             <div className='column'>

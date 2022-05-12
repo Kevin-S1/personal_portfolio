@@ -17,7 +17,6 @@
     width: 40vw;
     margin: 0 0.5rem 0.5rem 0;
     background-color: #459496e9;
-
 }
 
 .column-title{
@@ -25,13 +24,14 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-color: rgb(234, 234, 112);
+    background-color: #1d3e3fe9;
     margin-bottom: 1rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-bottom: 5px double rgb(234, 234, 112); 
 }
 
 .column-title .header{
-    color: #063e40;
+    color: white;
 }
   
 .column__sub{
@@ -45,7 +45,8 @@
 }
 
 .column__sub .header{
-    color: #063e40;
+    color: #f0feffec;
+    text-decoration: 2px rgb(234, 234, 112) underline;
     margin-bottom: 0.5rem;
 }
   
@@ -78,10 +79,6 @@
         align-items: center;  
         width: 18rem;
         height: 3rem;
-        background-color: #58c5c994;
-        border-radius: 0.2rem;
-        margin-bottom: 1rem;
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
     }
 
     .column__sub{
